@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peredozz — официальный сайт</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
       color: #ffffff;
       display: flex;
       flex-direction: column;
@@ -17,46 +20,66 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      overflow: hidden;
     }
     h1 {
-      font-size: 48px;
-      color: #1DB954; /* Spotify green */
+      font-size: 64px;
+      color: #1DB954;
+      text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
     }
     p {
-      font-size: 18px;
-      max-width: 600px;
+      font-size: 20px;
+      max-width: 700px;
       margin: 10px 0;
-    }
-    a {
-      color: #1DB954;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
+      color: #dddddd;
+      animation: fadeIn 1.5s ease-out;
     }
     .button {
-      margin-top: 20px;
-      padding: 12px 24px;
+      margin-top: 30px;
+      padding: 14px 28px;
       background-color: #1DB954;
       color: #121212;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 50px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      font-size: 18px;
+      box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+      transition: background-color 0.3s, transform 0.2s;
+      animation: fadeInUp 2s ease-out;
     }
     .button:hover {
       background-color: #17a74b;
+      transform: scale(1.05);
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <h1>Peredozz</h1>
-  <p>Официальная страница артиста.</p>
+  <p>Официальная страница артиста</p>
   <p>Контакт: <strong>sasho.mykh.global@gmail.com</strong></p>
-  <p>
-    Слушать на Spotify: <br>
-    <a class="button" href="https://open.spotify.com/album/7ovSfJ8ipsctmD0W45Cvky" target="_blank">Перейти к релизу</a>
-  </p>
+  <a class="button" href="https://open.spotify.com/album/7ovSfJ8ipsctmD0W45Cvky" target="_blank">
+    🎧 Перейти к релизу на Spotify
+  </a>
+  <footer>&copy; 2025 Peredozz Music. Все права защищены.</footer>
 </body>
 </html>
